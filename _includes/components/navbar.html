@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <div class="navbar-top">
+      <a class="navbar-brand" href="http://www.lf.mufg.jp/english/">
+       <!--  <img src="/logo.svg" alt="Patio Covers Unlimited NW" title="PCUNW Home Page" /> -->
+        <span>Patio Covers Unlimited North West</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {% if site.data.main-menu.mainMenu[0] %}
+        {% for item in site.data.main-menu.mainMenu %}
+            <li class="parent nav-item nav-{{item.class}} {% if item.url == page.url %}active{% endif %}">
+              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+        {% endif %}
+      </ul>
+      
+    </div>
+  </div>
+</nav>

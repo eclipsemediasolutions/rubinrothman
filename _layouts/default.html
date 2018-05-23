@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+{% include head.html %}
+    <body>
+        <header>
+            {% include components/navbar.html %}
+        </header>
+
+        <main class="main" aria-label="Content">
+            {{ content }}
+        </main>
+        <footer>
+            {% include components/footer-nav.html %}
+        </footer>
+        <!--startjs-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{{'/js/all.min.js'| prepend: site.baseurl | prepend: site.url }}"></script>
+        <script src="https://use.fontawesome.com/a6f07e9716.js"></script>
+        <!--endjs-->
+    </body>
+</html>

@@ -1,0 +1,7 @@
+mainMenu:
+  - title: Home
+    url: /
+    class: home
+    submenu:
+      - page: Sub Menu Item
+        url: /
