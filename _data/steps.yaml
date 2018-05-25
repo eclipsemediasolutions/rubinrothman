@@ -1,0 +1,22 @@
+stepsTeasers:
+  - step-icon: 'http://placehold.it/50x50'
+    img-alt: asdf
+    header: '1. Get In Touch'
+    text: 'Get in touch and let’s find out more about your debt and ability to pay'
+  - step-icon: 'http://placehold.it/50x50'
+    img-alt: asdf
+    header: '2. Understand'
+    text: 'To best help you, we work to understand the reasons for your financial hardship'
+  - step-icon: 'http://placehold.it/50x50'
+    img-alt: asdf
+    header: '3. Make A Plan'
+    text: 'Let’s discuss plans and payment options that work best for you and your budget'
+  - step-icon: 'http://placehold.it/50x50'
+    img-alt: asdf
+    header: '4. Start You Plan'
+    text: 'Now that we have a clear path, you are one payment closer to being debt free'
+stepsTeasersSpanish:
+  - step-icon: 'http://placehold.it/50x50'
+    img-alt: asdf
+    header: Who is Rubin Rothman, LLC
+    text: 'es teasers'

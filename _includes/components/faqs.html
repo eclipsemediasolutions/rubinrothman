@@ -1,0 +1,41 @@
+
+<div id="accordion">
+	{% assign count = 0 %}
+	{% if page.spanishtheme == true %}
+		{% for item in site.data.faqs.faqListSpanish %}
+		 {% capture count %}{{ count | plus:1 }}{% endcapture %}
+			<div class="card">
+				<div class="card-header">
+					<h5>
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{count}}" aria-expanded="true" aria-controls="collapse-{{count}}">
+						{{ item.question }}
+						</button>
+					</h5>
+				</div>
+				<div id="collapse-{{count}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">
+						{{ item.answer }}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		{% else %}
+		{% for item in site.data.faqs.faqList %}
+		 {% capture count %}{{ count | plus:1 }}{% endcapture %}
+			<div class="card">
+				<div class="card-header">
+					<h5>
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{count}}" aria-expanded="true" aria-controls="collapse-{{count}}">
+						{{ item.question }}
+						</button>
+					</h5>
+				</div>
+				<div id="collapse-{{count}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">
+						{{ item.answer }}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	{% endif %}
+</div>

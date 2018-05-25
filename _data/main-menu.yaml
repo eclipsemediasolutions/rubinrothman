@@ -1,7 +1,52 @@
 mainMenu:
-  - title: Home
-    url: /
-    class: home
+  - title: Who We Are
+    url: '#who-we-are'
+    class: who
+  - title: How It Works
+    url: '#how-it-works'
+    class: how
+  - title: FAQ
+    url: '#faq'
+    class: faq
+  - title: Get In Touch
+    url: '#contact'
+    class: contact
+  - title: Make A Payment
+    url: 'http://google.com'
+    class: make-a-payment
+  - title: Select A Language
+    url: '#'
+    class: dropdown
     submenu:
-      - page: Sub Menu Item
-        url: /
+      - page: Español
+        url: /es/index.html
+      - page: English
+        url: /index.html
+        class: active
+        status: btn disabled
+mainMenuSpanish:
+  - title: ES Who We Are
+    url: '#who-we-are'
+    class: who-we-are
+  - title: ES How It Works
+    url: '#how'
+    class: how-it-works
+  - title: ES FAQ
+    url: '#faq'
+    class: faq
+  - title: ES Get In Touch
+    url: '#contact'
+    class: contact
+  - title: ES Make A Payment
+    url: 'http://google.com'
+    class: make-a-payment
+  - title: ES Select A Language
+    url: '#'
+    class: dropdown
+    submenu:
+      - page: Español
+        url: /es/index.html
+        class: active
+        status: btn disabled
+      - page: English
+        url: /index.html

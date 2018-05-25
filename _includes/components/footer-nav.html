@@ -1,27 +1,18 @@
-<nav class="footer navigation">
-    <div class="container">
-      <ul class="nav menu">
-      {% if site.data.main-menu.mainMenu[0] %}
-      {% for item in site.data.main-menu.mainMenu %}
-         <li class="parent nav-item nav-{{item.class}} {% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-          {% if item.submenu[0] %}
-          <ul class="subnav">
-            {% for entry in item.submenu %}
-            <li class="child nav-item nav-{{entry.class}} {% if entry.url == page.url %}active{% endif %}"><a href="{{ entry.url }}" class="nav-link">{{ entry.page }}</a></li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-      {% endfor %}
-      {% endif %}
-    </ul>
-    <div class="terms-privacy">
-        <a href="/terms-of-use.html">TERMS OF USE </a>
-        &nbsp;|&nbsp;
-        <a href="/privacy-policy.html">PRIVACY POLICY</a>
-    </div>
-    <div class="copyright">
-      <small>&copy; All Rights reserved.</small>
-    </div>
-  </div>
-</nav>
+<footer class="footer">
+	<div class="copy">
+		<div class="container">
+			<span class="copyright">
+				<small>&copy; {{ site.time | date: '%Y' }} Rubin &amp; Rothman</small>
+			</span>
+			<span class="terms-privacy">
+				<a href="{{page.link-terms}}">{{page.terms-label}}</a>&nbsp;|&nbsp;
+				<a href="{{page.link-policy}}">{{page.policy-label}}</a>
+			</span>
+		</div>
+	</div>
+	<div class="disclamer">
+		<div class="container">
+			<p>{{ page.disclamer }}</p>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<section class="single-page">
+	<!-- HEADER IMAGE -->
+	{% if page.header_img %}
+	<div class="page-header-img" style="background-image: url('{{ page.header_img }}');" >
+		<div class="container">
+			<h2>{{page.hero-cta-header}}</h2>
+			<label>{{page.hero-cta-label}}</label>
+			<a href="#contact">{{page.hero-cta-link-text}}</a>
+		</div>
+	</div>
+	{% endif %}
+	<!-- Who is RR-->
+	<div class="page-content" id="who-we-are">
+		<div class="container">
+			<h1 class="page-title">{{ page.title }}</h1>
+			{{ content }}
+		</div>
+	</div>
+	<!-- Path forward-->
+	<div class="page-content" id="how-it-works">
+		<div class="container">
+			{% include components/steps.html %}
+		</div>
+	</div>
+	<!-- faqs data-->
+		<div class="page-content" id="faq">
+		<div class="container">
+			{{page.faq-header}}
+			{% include components/faqs.html %}
+		</div>
+	</div>
+	<!-- Make a payment-->
+		<div class="page-content" id="make-a-payment">
+		<div class="container">
+			<h2>{{page.payment-header}}</h2>
+			{% include components/payment-block.html %}
+		</div>
+	</div>
+	<!-- Contact-->
+		<div class="page-content" id="contact">
+		<div class="container">
+			<h2>{{page.contact-header}}</h2>
+			{% include components/contact-block.html %}
+		</div>
+	</div>
+</section>

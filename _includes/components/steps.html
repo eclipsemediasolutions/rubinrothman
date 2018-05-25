@@ -1,0 +1,32 @@
+<div>
+	<div class="steps-row-one">
+		<h2>{{ page.stepsheader }}</h2>
+		<p>{{ page.stepsintro }}</p>
+	</div>
+	<div class="steps-row-two">
+		<div class="row">
+		{% if page.spanishtheme == true %}
+			{% for item in site.data.steps.stepsTeasersSpanish %}
+				<div class="step-teaser col-md-3">
+					<img src="{{item.step-icon}}" alt="{{item.img-alt}}"/>
+					<h4>{{ item.header }}</h4>
+					<div>{{ item.text }}</div>
+				</div>
+			{% endfor %}
+		{% else %}
+			{% for item in site.data.steps.stepsTeasers %}
+				<div class="step-teaser col-md-3">
+					<img src="{{item.step-icon}}" alt="{{item.img-alt}}" />
+					<h4>{{ item.header }}</h4>
+					<div>{{ item.text }}</div>
+				</div>
+			{% endfor %}
+		{% endif %}
+		</div>
+	</div>
+	<div class="steps-row-three">
+		<img src="{{page.phone-icon}}" alt="graphic icon of a phone with a talk bubble coming out" />
+		<h3 class="phone-cta">{{page.phone-cta}}</h3>
+		<span class="phone-cta-number">{{site.phone}}</span>
+	</div>
+</div>

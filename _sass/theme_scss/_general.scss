@@ -3,11 +3,86 @@
 */
 // ADD Specific imports here
 // this file and parent_theme files are being imported and compiled by main.scss in the root
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
 
+@import 'variables';
 @import 'overrides';
 
 
+$rr-blue: 		#005b8f;
+$rr-blue07: 	rgba(0, 91, 143,.7);
+$hero-bg-blue: 	#040c19;
+$rr-light-blue: #60c5ff;
+$rr-green:	 	#b8d900;
+$rr-black: 		#3b3b3b;
+$rr-gray50: 	#e5e5e5;
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
 
 
 // _general.scss will compile last
 
+.page-header-img{
+		min-height: 540px;
+		background: $hero-bg-blue;
+		background-repeat: no-repeat;
+		background-position: 100% 0;
+		background-size: 1300px;
+		display: flex;
+		align-items: center;
+		h2{
+			color: #fff;
+			margin-bottom: 40px;
+			max-width: 430px;
+			font-weight: 300;
+		}
+		label{
+			color: $rr-light-blue;
+			display: block;
+		}
+		a{
+			color: $rr-green;
+			text-transform: uppercase;
+		}
+}
+
+.navbar-dark {
+	padding: 0 1rem;
+	background: $rr-blue07;
+	.navbar-nav{
+		width: 100%;
+		.nav-item{
+			.nav-link {
+			    color: #fff;
+			    font-size: 15px;
+			    text-transform: uppercase;
+			    font-family: 'Montserrat';
+			    font-weight: 400;
+			    letter-spacing: .01em;
+			    padding: 20px 20px;
+			}
+
+			&.dropdown{
+				right: 0;
+				position: absolute;
+				.nav-link{
+					background: $rr-gray50;
+					color: $rr-black;
+				}
+			}
+	
+
+
+			&.make-a-payment{
+				.nav-link{
+					background: $rr-green;
+					color: $rr-black;
+					margin: 10px 0;
+					padding: 10px 20px;
+				}
+			}
+		}
+	}
+}
