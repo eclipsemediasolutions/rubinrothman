@@ -6,11 +6,11 @@
 			</span>
 			<span class="terms-privacy">
 				{% if page.spanishtheme == true %}
-				<a href="{{site.es-link-terms}}">{{site.es-terms-label}}</a>&nbsp;|&nbsp;
-				<a href="{{site.es-link-policy}}">{{site.es-policy-label}}</a>
+				<a href="{{site.es-link-terms | prepend: site.baseurl | prepend: site.url }}">{{site.es-terms-label}}</a>&nbsp;|&nbsp;
+				<a href="{{site.es-link-policy | prepend: site.baseurl | prepend: site.url }}">{{site.es-policy-label}}</a>
 				{% else %}
-				<a href="{{site.link-terms}}">{{site.terms-label}}</a>&nbsp;|&nbsp;
-				<a href="{{site.link-policy}}">{{site.policy-label}}</a>
+				<a href="{{site.link-terms | prepend: site.baseurl | prepend: site.url }}">{{site.terms-label}}</a>&nbsp;|&nbsp;
+				<a href="{{site.link-policy | prepend: site.baseurl | prepend: site.url }}">{{site.policy-label}}</a>
 				{% endif %}
 			</span>
 		</div>
