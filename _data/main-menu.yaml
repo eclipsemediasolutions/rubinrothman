@@ -1,16 +1,16 @@
 mainMenu:
   - title: Who We Are
     url: '#who-we-are'
-    class: who
+    class: pagescroll who
   - title: How It Works
     url: '#how-it-works'
-    class: how
+    class: pagescroll how
   - title: FAQ
     url: '#faq'
-    class: faq
+    class: pagescroll faq
   - title: Get In Touch
     url: '#contact'
-    class: contact
+    class: pagescroll contact
   - title: Make A Payment
     url: 'http://google.com'
     class: make-a-payment
@@ -27,16 +27,16 @@ mainMenu:
 mainMenuSpanish:
   - title: ES Who We Are
     url: '#who-we-are'
-    class: who-we-are
+    class: pagescroll who-we-are
   - title: ES How It Works
     url: '#how'
-    class: how-it-works
+    class: pagescroll how-it-works
   - title: ES FAQ
     url: '#faq'
-    class: faq
+    class: pagescroll faq
   - title: ES Get In Touch
     url: '#contact'
-    class: contact
+    class: pagescroll contact
   - title: ES Make A Payment
     url: 'http://google.com'
     class: make-a-payment

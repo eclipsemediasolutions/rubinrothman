@@ -18,7 +18,7 @@
 				{% if page.spanishtheme == true %}
 					{% for item in site.data.main-menu.mainMenuSpanish %}
 					<li class="parent nav-item {{item.class}} {% if item.url == page.url %}active{% endif %}">
-						<a href="{{ item.url }}" class="nav-link {% if item.submenu[0] %}dropdown-toggle{% endif %}" {% if item.submenu[0] %} role="button" id="dropdownMenuLink" data-toggle="dropdown" {% endif %}>{{ item.title }}</a>
+						<a href="{{ item.url }}" class="pagescroll nav-link {% if item.submenu[0] %}dropdown-toggle{% endif %}" {% if item.submenu[0] %} role="button" id="dropdownMenuLink" data-toggle="dropdown" {% endif %}>{{ item.title }}</a>
 						{% if item.submenu[0] %}
 						<div class="dropdown-menu">
 							{% for entry in item.submenu %}
@@ -31,7 +31,7 @@
 				{% else %}
 					{% for item in site.data.main-menu.mainMenu %}
 						<li class="parent nav-item {{item.class}} {% if item.url == page.url %}active{% endif %}">
-							<a href="{{ item.url }}" class="nav-link {% if item.submenu[0] %}dropdown-toggle{% endif %}" {% if item.submenu[0] %} role="button" id="dropdownMenuLink" data-toggle="dropdown" {% endif %}>{{ item.title }}</a>
+							<a href="{{ item.url }}" class="pagescroll nav-link {% if item.submenu[0] %}dropdown-toggle{% endif %}" {% if item.submenu[0] %} role="button" id="dropdownMenuLink" data-toggle="dropdown" {% endif %}>{{ item.title }}</a>
 							{% if item.submenu[0] %}
 							<div class="dropdown-menu">
 								{% for entry in item.submenu %}

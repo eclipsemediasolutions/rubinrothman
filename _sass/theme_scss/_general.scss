@@ -439,6 +439,36 @@ body{
 			color: $rr-light-blue;
 		}
 	}
+
+	.cotact-form{
+		form {
+			label{
+				
+    font-size: 14px;
+    font-weight: 600;
+
+			}
+			.form-control{
+				border-radius: 0;
+				border-color: #ddd;
+			}
+			.btn.btn-primary{
+				background: $rr-green;
+				color: #3b3b3b;
+				border: 0;
+				border-radius: 0;
+				margin: 0;
+				float: right;
+				clear: both;
+				padding: 10px 39px;
+				font-weight: 600;
+				text-transform: uppercase;
+				&:hover{
+					background: lighten($rr-green, 10%);
+				}
+			}
+		}
+	}
 }
 
 
