@@ -1,32 +1,58 @@
 <div>
 	<div class="steps-row-one">
-		<h2>{{ page.stepsheader }}</h2>
-		<p>{{ page.stepsintro }}</p>
+		<div class="container">
+			<div class="cheveron-content">
+				<h2>{{ page.stepsheader }}</h2>
+				<p>{{ page.stepsintro }}</p>
+			</div>
+			<div class="cheveron"></div>
+		</div>
 	</div>
 	<div class="steps-row-two">
-		<div class="row">
-		{% if page.spanishtheme == true %}
-			{% for item in site.data.steps.stepsTeasersSpanish %}
-				<div class="step-teaser col-md-3">
-					<img src="{{item.step-icon}}" alt="{{item.img-alt}}"/>
-					<h4>{{ item.header }}</h4>
-					<div>{{ item.text }}</div>
+		<div class="container">
+			<div class="row">
+			{% assign count = 0 %}
+			{% if page.spanishtheme == true %}
+				{% for item in site.data.steps.stepsTeasersSpanish %}
+				{% capture count %}{{ count | plus:1 }}{% endcapture %}
+					<div class="step-teaser col-md-3  step-{{ count }}">
+						<div class="cheveron-content">
+							<img src="{{item.step-icon | prepend: site.baseurl | prepend: site.url}}" alt="{{item.img-alt}}"/>
+							<h4>{{ item.header }}</h4>
+							<h5>{{ item.text }}</h5>
+						</div>
+					
+						<div class="cheveron"></div>
+					</div>
+				{% endfor %}
+			{% else %}
+				{% for item in site.data.steps.stepsTeasers %}
+				{% capture count %}{{ count | plus:1 }}{% endcapture %}
+				<div class="step-teaser col-md-3  step-{{ count }}">
+					<div class="cheveron-content">
+							<img src="{{item.step-icon | prepend: site.baseurl | prepend: site.url }}" alt="{{item.img-alt}}" />
+							<h4>{{ item.header }}</h4>
+							<h5>{{ item.text }}</h5>
+						</div>
+					<div class="cheveron"></div>
 				</div>
-			{% endfor %}
-		{% else %}
-			{% for item in site.data.steps.stepsTeasers %}
-				<div class="step-teaser col-md-3">
-					<img src="{{item.step-icon}}" alt="{{item.img-alt}}" />
-					<h4>{{ item.header }}</h4>
-					<div>{{ item.text }}</div>
-				</div>
-			{% endfor %}
-		{% endif %}
+					
+				{% endfor %}
+			{% endif %}
+			</div>
 		</div>
 	</div>
 	<div class="steps-row-three">
-		<img src="{{page.phone-icon}}" alt="graphic icon of a phone with a talk bubble coming out" />
-		<h3 class="phone-cta">{{page.phone-cta}}</h3>
-		<span class="phone-cta-number">{{site.phone}}</span>
+		<div class="container">
+			<div class="cheveron"></div>
+			<div class="cheveron-content">
+				<img src="{{ page.phone-icon | prepend: site.baseurl | prepend: site.url}}" alt="graphic icon of a phone with a talk bubble coming out" />
+				
+				<div class="step-3-teaser">
+					<h3 class="phone-cta">{{page.phone-cta}}</h3>
+					<span class="phone-cta-number">{{site.phone}}</span>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

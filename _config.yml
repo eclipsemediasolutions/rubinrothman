@@ -22,3 +22,18 @@ exclude:
   - package.json
   - node_modules
   - gulpfile.js
+
+
+
+policy-label: PRIVACY POLICY
+terms-label: TERMS OF USE 
+link-policy: /privacy-policy.html
+link-terms: /terms-of-use.html
+
+es-policy-label: es PRIVACY POLICY
+es-terms-label: es TERMS OF USE 
+es-link-policy: /es/privacy-policy.html
+es-link-terms: /es/terms-of-use.html
+
+es-disclamer: 'This communication is from a debt collector. This is an attempt to collect a debt and any information obtained will be used for that purpose'
+disclamer: 'This communication is from a debt collector. This is an attempt to collect a debt and any information obtained will be used for that purpose'

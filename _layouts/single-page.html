@@ -4,7 +4,7 @@ layout: default
 <section class="single-page">
 	<!-- HEADER IMAGE -->
 	{% if page.header_img %}
-	<div class="page-header-img" style="background-image: url('{{ page.header_img }}');" >
+	<div class="page-header-img" style="background-image: url('{{ page.header_img | prepend: site.baseurl | prepend: site.url }}');" >
 		<div class="container">
 			<h2>{{page.hero-cta-header}}</h2>
 			<label>{{page.hero-cta-label}}</label>
@@ -21,14 +21,12 @@ layout: default
 	</div>
 	<!-- Path forward-->
 	<div class="page-content" id="how-it-works">
-		<div class="container">
 			{% include components/steps.html %}
-		</div>
 	</div>
 	<!-- faqs data-->
 		<div class="page-content" id="faq">
 		<div class="container">
-			{{page.faq-header}}
+			<h2>{{page.faq-header}}</h2>
 			{% include components/faqs.html %}
 		</div>
 	</div>

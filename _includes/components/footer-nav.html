@@ -2,17 +2,26 @@
 	<div class="copy">
 		<div class="container">
 			<span class="copyright">
-				<small>&copy; {{ site.time | date: '%Y' }} Rubin &amp; Rothman</small>
+				&copy; {{ site.time | date: '%Y' }} Rubin &amp; Rothman
 			</span>
 			<span class="terms-privacy">
-				<a href="{{page.link-terms}}">{{page.terms-label}}</a>&nbsp;|&nbsp;
-				<a href="{{page.link-policy}}">{{page.policy-label}}</a>
+				{% if page.spanishtheme == true %}
+				<a href="{{site.es-link-terms}}">{{site.es-terms-label}}</a>&nbsp;|&nbsp;
+				<a href="{{site.es-link-policy}}">{{site.es-policy-label}}</a>
+				{% else %}
+				<a href="{{site.link-terms}}">{{site.terms-label}}</a>&nbsp;|&nbsp;
+				<a href="{{site.link-policy}}">{{site.policy-label}}</a>
+				{% endif %}
 			</span>
 		</div>
 	</div>
 	<div class="disclamer">
 		<div class="container">
-			<p>{{ page.disclamer }}</p>
+			{% if page.spanishtheme == true %}
+			<p>{{ site.es-disclamer }}</p>
+			{% else %}
+			<p>{{ site.disclamer }}</p>
+			{% endif %}
 		</div>
 	</div>
 </footer>

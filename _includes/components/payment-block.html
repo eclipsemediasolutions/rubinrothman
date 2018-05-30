@@ -1,24 +1,24 @@
-<div class="row">
-	<div class="col-md-4" id="payment-mail">
-		<img src="http://placehold.it/120x100" alt="graphic icon of an envelope" />
+<div class="payment-options">
+	<div class="card" id="payment-mail">
+		<img src="{{'/images/pay-by-mail.png' | prepend: site.baseurl | prepend: site.url }}" alt="graphic icon of an envelope" />
 		<h3>{{page.mail-label}}</h3>
 		<address>
 		<strong>{{site.title}}</strong><br>
 		{{site.address}}
 		</address>
-		<p><strong>{{page.license-label}}{{site.license}}</strong></p>
+		<p><strong>{{page.license-label}}: {{site.license}}</strong></p>
 	</div>
-	<div class="col-md-4" id="payment-online">
+	<div class="card" id="payment-online">
 		<span>{{page.recommended-label}}</span>
-		<img src="http://placehold.it/120x100" alt="graphic icon of a computer screen" />
+		<img src="{{'/images/pay-online.png' | prepend: site.baseurl | prepend: site.url }}" alt="graphic icon of a computer screen" />
 		<h3>{{page.portal-label}}</h3>
 		<p>{{page.payment-portal-teaser}}</p>
 		<a href="{{page.payment-portal-link}}">{{page.payment-portal-link-text}}</a>
 	</div>
-	<div class="col-md-4" id="payment-phone">
-		<img src="http://placehold.it/120x100" alt="graphic icon of a phone" />
-		<h3>{{page.payment-phone-header}}</h3>
-		<p>{{page.payent-phone-teaser}}</p>
+	<div class="card" id="payment-phone">
+		<img src="{{'/images/pay-by-phone.png' | prepend: site.baseurl | prepend: site.url }}" alt="graphic icon of a phone" />
+		<h3>{{page.payment-phone-label}}</h3>
+		<p>{{page.payment-phone-teaser}}</p>
 		<p><strong>{{site.phone}}</strong></p>
 	</div>
 </div>

@@ -4,13 +4,13 @@
 // ADD Specific imports here
 // this file and parent_theme files are being imported and compiled by main.scss in the root
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
-
 @import 'variables';
 @import 'overrides';
 
 
 $rr-blue: 		#005b8f;
 $rr-blue07: 	rgba(0, 91, 143,.7);
+$rr-mid-blue:		#2c8bc1;
 $hero-bg-blue: 	#040c19;
 $rr-light-blue: #60c5ff;
 $rr-green:	 	#b8d900;
@@ -19,10 +19,19 @@ $rr-gray50: 	#e5e5e5;
 
 body{
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 100;
 }
 
 
+.basic-page{
+	padding-top: 100px;
+}
+
 // _general.scss will compile last
+
+.page-content#who-we-are{
+    padding: 40px 0;
+}
 
 .page-header-img{
 		min-height: 540px;
@@ -41,11 +50,20 @@ body{
 		label{
 			color: $rr-light-blue;
 			display: block;
+			margin: 0;
 		}
 		a{
 			color: $rr-green;
 			text-transform: uppercase;
 		}
+}
+
+.page-title{
+    font-size: 31px;
+    text-align: center;
+    margin: 0 0 20px;
+    font-weight: 200;
+
 }
 
 .navbar-dark {
@@ -70,6 +88,29 @@ body{
 				.nav-link{
 					background: $rr-gray50;
 					color: $rr-black;
+					
+
+				}
+				.dropdown-menu{
+				    border-radius: 0;
+				    margin: 0;
+				    padding: 0;
+				    border: 0;
+				    a{
+				    	color: $rr-mid-blue;
+				    	&:hover{
+				    		background: lighten($rr-gray50, 5%);
+				    		color: $rr-blue;
+				    	}
+				    	&.disabled{
+							color: #333;
+							&:hover{
+								background: $rr-gray50;
+								color: $rr-black;
+
+							}
+						}
+				    }
 				}
 			}
 	
@@ -86,3 +127,353 @@ body{
 		}
 	}
 }
+
+@mixin step-gradient-half($left-color, $right-color) {
+	background: $left-color; /* Old browsers */
+	background: -moz-linear-gradient(left, $left-color 54%, $right-color 54%);
+	background: -webkit-linear-gradient(left, $left-color 54%,$right-color 54%);
+	background: linear-gradient(to right, $left-color 54%,$right-color 54%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left-color', endColorstr='$right-color',GradientType=1 ); /* IE6-9 */
+}
+
+
+.step-teaser{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: red;
+    padding: 0 10px 0 0;
+    h4{
+		font-size: 15px;
+		text-align: center;
+		margin: 5px 0;
+		text-transform: uppercase;
+		color: $rr-green;
+		font-weight: 600;
+		letter-spacing: .06em;
+    }
+    h5{
+		font-size: 13px;
+		text-align: center;
+		font-weight: 300;
+    }
+    img{
+  	    margin: 10px 0;
+    }
+    .cheveron-content{
+    	text-align: center;
+		background: #002439;
+		padding: 20px 0;
+	    max-width: 85%;
+	    min-height: 240px;
+	    position: relative;
+	   
+	}
+	.cheveron{
+		width: 0;
+		height: 0;
+		border-top: 120px solid transparent;
+		border-left: 50px solid #002439;
+		border-bottom: 120px solid transparent;
+    }
+    &.step-1{
+    	background: #0b3f5d;
+    	.cheveron-content{
+    		background: #003656;
+    	}
+    	.cheveron{
+    		border-left-color: #003656;
+    	}
+    }
+    &.step-2{
+    	background: #1e5372;
+    	.cheveron-content{
+    		background: #0b3f5d;
+    	}
+    	.cheveron{
+    		border-left-color: #0b3f5d;
+    	}
+    }
+    &.step-3{
+    	background: #206187;
+    	.cheveron-content{
+    		background: #1e5372;
+    	}
+    	.cheveron{
+    		border-left-color: #1e5372;
+    	}
+    }
+    &.step-4{
+    	background: $rr-mid-blue;
+    	.cheveron-content{
+    		background: #206187;
+    	}
+    	.cheveron{
+    		border-left-color: #206187;
+    	}
+    }
+}
+
+
+.steps-row-one{
+    color: #fff;
+	@include step-gradient-half(#002439, #003656); 
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+    h2{
+	    font-size: 26px;
+	    font-weight: 100;
+	    margin: 0 0 20px 0;
+	}
+	.cheveron-content{
+		background: #002439;
+		padding: 40px 0;
+	    max-width: 85%;
+	    min-height: 240px;
+	    position: relative;
+	   
+	}
+	.cheveron{
+		width: 0;
+		height: 0;
+		border-top: 120px solid transparent;
+		border-left: 50px solid #002439;
+		border-bottom: 120px solid transparent;
+    }
+}
+
+.steps-row-two{
+    color: #fff;
+	@include step-gradient-half(#003656, $rr-mid-blue); 
+}
+
+.steps-row-three{
+    color: #3b3b3b;
+	@include step-gradient-half($rr-mid-blue, #fff); 
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	.cheveron-content{
+	    max-width: 85%;
+	    min-height: 240px;
+	    position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		background: #fff;
+		padding: 0 40px;
+		.step-3-teaser{
+		    margin: 40px;
+		    .phone-cta{
+				font-size: 19px;
+				margin: 0;
+		    }
+		    .phone-cta-number{
+				font-size: 50px;
+				margin: 0;
+				line-height: 50px;
+				color: $rr-blue;
+		    }
+		}
+	}
+	.cheveron{
+		width: 0;
+		height: 0;
+		border-top: 120px solid transparent;
+		border-left: 50px solid $rr-mid-blue;
+		border-bottom: 120px solid transparent;
+		background: #fff;
+    }
+}
+
+
+#faq{
+	background: #f2f2f2;
+	padding: 50px 0;	
+	h2 {
+	    font-size: 26px;
+	    font-weight: 100;
+	    margin: 0 0 20px;
+	    text-align: center;
+	}
+	.card{
+	    border-radius: 0;
+	    margin: 0 0 15px;
+	}
+	.card-header{
+	    padding: 0;
+	    margin: 0;
+	    line-height: 0;
+	    h5{
+	    	margin: 0;
+	    	a{
+	    		display: block;
+				text-align: left;
+				color: #fff;
+				background: $rr-mid-blue;
+				font-size: 20px;
+				display: flex;
+    			align-items: center;
+    			border-radius: 0;
+				&:before{
+					content: '-';
+					font-size: 30px;
+					line-height: 0;
+					padding: 0 10px 0 0;
+				}
+				&.collapsed{
+					background: #dcdcdc;
+					color: $rr-blue;	
+					&:before{
+						content: '+';
+					}
+				}
+	    	}
+	    }
+	}
+}
+
+
+
+.page-content#make-a-payment{
+	padding: 40px 0 80px;
+	box-shadow: inset 0 0 8px -3px rgba(0,0,0,.5);
+	background: #ffffff; 
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #d6d6d6 100%); 
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#d6d6d6 100%); 
+	background: radial-gradient(ellipse at center, #ffffff 0%,#d6d6d6 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=1 );
+	
+	h2{
+			font-size: 26px;
+			font-weight: 100;
+			text-align: center;
+			margin: 20px 0 50px;
+			color: $rr-blue;
+	}
+	.payment-options{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	
+		.card{
+			min-height: 400px;
+			text-align: center;
+	    	padding: 30px;
+	    	flex-basis: 31%;
+	    	display: block;
+			border: 0;
+			border-radius: 0;
+			box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.34);
+
+	    	h3{
+	    		
+			    font-size: 20px;
+			    font-weight: 600;
+			    text-transform: uppercase;
+
+	    	}
+	    	strong{
+	    		font-weight: 600;
+	    	}
+	    	address strong{
+	    		line-height: 40px;
+	    	}
+	    	&#payment-online {
+			    min-height: 460px;
+			    background: #525252;
+			    color: #fff;
+			    padding: 0 30px 0;
+			    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+
+			    span{
+					margin: 10px 10px 30px;
+					display: block;
+					text-transform: uppercase;
+					font-size: 14px;
+			    }
+			    h3{
+			    	color: $rr-green;
+		    	    margin: 30px 0 15px;
+
+			    }
+			    a{
+					display: block;
+					background: $rr-green;
+					margin: 0 -30px;
+					padding: 24px;
+					text-transform: uppercase;
+					color: #525252;
+					font-weight: 600;
+					font-size: 19px;
+			    }
+			}
+		}
+	}
+}
+
+
+.page-content#contact{
+	background: #f2f2f2;
+	padding: 50px 0;
+	h2{
+			font-size: 26px;
+			font-weight: 100;
+			text-align: center;
+			margin: 20px 0 50px;
+	}
+	.contact-item{
+		margin-bottom: 40px;
+		label{
+			font-size: 18px;
+			text-transform: uppercase;
+			font-weight: 600;
+			display: block
+		}
+		div{
+			color: $rr-light-blue;
+		}
+	}
+}
+
+
+.copy{
+	background: $rr-mid-blue;
+	color: #fff;
+	font-size: 16px;
+	a {
+		color: #fff;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.container{
+		display: flex;
+	    padding: 30px 0;
+	    justify-content: space-between;
+	    
+	    text-transform: uppercase;
+
+	}
+
+
+}
+
+.disclamer{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	background: #3b3b3b;
+	p{
+		margin: 0;
+		padding: 15px 0;
+	}
+}
+
+
+
