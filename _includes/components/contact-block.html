@@ -32,17 +32,17 @@
 	<div class="col-md-6 cotact-form">
 		<form method="POST" action="https://formspree.io/kyle@eclipsemediasolutions.com">
 			<div class="form-group">
-				 <label for="name-input">Name</label>
-				 <input type="text" class="form-control" id="name-input" aria-describedby="name" placeholder="Enter name"  name="name">
+				 <label for="name-input required">Name <span class="text-danger">*</span></label>
+				 <input type="text" class="form-control" id="name-input" aria-describedby="name" required placeholder="Enter name"  name="name">
 			</div>
 			<div class="form-group">
-				 <label for="email-input">Email</label>
-				 <input type="email" class="form-control" id="email-input" aria-describedby="email-address" placeholder="you@youremail.com"  name="email">
-				 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				 <label for="email-input required">Email <span class="text-danger">*</span></label>
+				 <input type="email" class="form-control" id="email-input" aria-describedby="email-address" required placeholder="you@youremail.com"  name="email">
+				 <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
 			</div>
 			<div class="form-group">
-				 <label for="phone-input">Phone</label>
-				 <input type="text" class="form-control" id="phone-input" aria-describedby="phone-number" placeholder="555-555-5555"  name="phone">
+				 <label for="phone-input required">Phone <span class="text-danger">*</span></label>
+				 <input type="text" class="form-control" id="phone-input" required aria-describedby="phone-number" placeholder="555-555-5555"  name="phone">
 			</div>
 			<div class="form-group">
 				 <label for="form-message">Message</label>

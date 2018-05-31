@@ -9,6 +9,7 @@
 
 
 $rr-blue: 		#005b8f;
+$rr-blue09: 	rgba(0, 91, 143,.9);
 $rr-blue07: 	rgba(0, 91, 143,.7);
 $rr-mid-blue:		#2c8bc1;
 $hero-bg-blue: 	#040c19;
@@ -68,7 +69,10 @@ body{
 
 .navbar-dark {
 	padding: 0 1rem;
-	background: $rr-blue07;
+	background: $rr-blue09;
+	.navbar-brand{
+		margin-right: 40px;
+	}
 	.navbar-nav{
 		width: 100%;
 		.nav-item{
@@ -96,6 +100,7 @@ body{
 				    margin: 0;
 				    padding: 0;
 				    border: 0;
+				    width: 100%;
 				    a{
 				    	color: $rr-mid-blue;
 				    	&:hover{
@@ -436,7 +441,7 @@ body{
 			display: block
 		}
 		div{
-			color: $rr-light-blue;
+			color: $rr-mid-blue;
 		}
 	}
 
