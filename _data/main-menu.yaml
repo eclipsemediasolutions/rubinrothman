@@ -12,7 +12,7 @@ mainMenu:
     url: '#contact'
     class: pagescroll contact
   - title: Make A Payment
-    url: 'http://google.com'
+    url: 'https://www.secured-server.biz/RubinRothman/HP/'
     class: make-a-payment
   - title: Select A Language
     url: '#'
@@ -38,7 +38,7 @@ mainMenuSpanish:
     url: '#contact'
     class: pagescroll contact
   - title: ES Make A Payment
-    url: 'http://google.com'
+    url: 'https://www.secured-server.biz/RubinRothman/HP/'
     class: make-a-payment
   - title: ES Select A Language
     url: '#'

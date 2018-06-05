@@ -13,32 +13,32 @@ layout: default-front
 	</div>
 	{% endif %}
 	<!-- Who is RR-->
-	<div class="page-content" id="who-we-are">
+	<div class="page-content" id="who-we-are" name="who-we-are">
 		<div class="container">
 			<h1 class="page-title">{{ page.title }}</h1>
 			{{ content }}
 		</div>
 	</div>
 	<!-- Path forward-->
-	<div class="page-content" id="how-it-works">
+	<div class="page-content" id="how-it-works" name="how-it-works">
 			{% include components/steps.html %}
 	</div>
 	<!-- faqs data-->
-		<div class="page-content" id="faq">
+		<div class="page-content" id="faq" name="faq">
 		<div class="container">
 			<h2>{{page.faq-header}}</h2>
 			{% include components/faqs.html %}
 		</div>
 	</div>
 	<!-- Make a payment-->
-		<div class="page-content" id="make-a-payment">
+		<div class="page-content" id="make-a-payment" name="make-a-payment">
 		<div class="container">
 			<h2>{{page.payment-header}}</h2>
 			{% include components/payment-block.html %}
 		</div>
 	</div>
 	<!-- Contact-->
-		<div class="page-content" id="contact">
+		<div class="page-content" id="contact" name="contact">
 		<div class="container">
 			<h2>{{page.contact-header}}</h2>
 			{% include components/contact-block.html %}
