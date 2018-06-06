@@ -4,9 +4,11 @@
 // ADD Specific imports here
 // this file and parent_theme files are being imported and compiled by main.scss in the root
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+
+$red: #d82536 !default;
 @import 'variables';
 @import 'overrides';
-$red: #d82536 !default;
+
 
 $rr-blue: 		#005b8f;
 $rr-blue09: 	rgba(0, 91, 143,.9);
