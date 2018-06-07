@@ -60,23 +60,23 @@ function delayedEaseIn(item) {
   }, 700);
 }
 //Aninmated ELs
+//
+// $('#who-we-are .container').waypoint({
+//   handler: function(direction) {
+//     //set timeout to delay this
+//
+//     delayedEaseIn('#who-we-are .container');
+//
+//   },
+//   offset: '85%'
+// });
 
-$('#who-we-are .container').waypoint({
-  handler: function(direction) {
-    //set timeout to delay this
-
-    delayedEaseIn('#who-we-are .container');
-
-  },
-  offset: '85%'
-});
-
-$('.page-header-img .container').waypoint({
-  handler: function(direction) {
-    subtleEaseIn('.page-header-img .container');
-  },
-  offset: '85%'
-});
+// $('.page-header-img .container').waypoint({
+//   handler: function(direction) {
+//     subtleEaseIn('.page-header-img .container');
+//   },
+//   offset: '85%'
+// });
 //fade in from left - step one of "a path forward"
 
 $('#how-it-works .steps-row-one #row-one-copy').waypoint({
@@ -101,6 +101,15 @@ $('#how-it-works .steps-row-two .step-1 .step-container').waypoint({
   },
   offset: '80%'
 });
+
+
+$('.steps-row-three .step-3-teaser').waypoint({
+  handler: function(direction) {
+    subtleEaseIn('.steps-row-three .step-3-teaser');
+  },
+  offset: '80%'
+});
+
 $('#faq #accordion .card').waypoint({
   handler: function(direction) {
     subtleEaseIn('#faq #accordion .card');
@@ -111,7 +120,7 @@ $('#payment-online').waypoint({
   handler: function(direction) {
     subtleEaseIn('#payment-online');
   },
-  offset: '80%'
+  offset: '70%'
 });
 
 // $('.hero').waypoint({
