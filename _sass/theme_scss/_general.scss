@@ -20,6 +20,75 @@ $rr-green:	 	#b8d900;
 $rr-black: 		#3b3b3b;
 $rr-gray50: 	#e5e5e5;
 
+$fadeInUpDuration: 0.9s;
+$fadeInLeftDuration: 0.8s;
+
+//fadeInUp animations on hero copy
+#who-we-are .container,
+.page-header-img .container {
+	//
+	transform: translateY(50px);
+	opacity: 0;
+	transition: transform $fadeInUpDuration, opacity $fadeInUpDuration;
+
+	&.fadeInUp {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+//a path forward transitions: translatex and opacity
+// #how-it-works .steps-row-one #row-one-copy {
+// 	transform: translateX(-50px);
+// 	opacity: 0;
+// 	transition: transform $fadeInLeftDuration, opacity $fadeInLeftDuration;
+// 	&.fadeInLeft {
+// 		transform: translateX(0);
+// 		opacity: 1;
+// 	}
+// }
+//A path forward transition: opacity only
+#how-it-works .steps-row-one #row-one-copy {
+	//transform: translateX(-50px);
+	opacity: 0;
+	transition: /*transform $fadeInLeftDuration,*/ opacity $fadeInLeftDuration;
+	&.fadeInLeft {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+//fadeinLeft for steps 1-4
+#how-it-works .steps-row-two .step-1 .step-container,
+#how-it-works .steps-row-two .step-2 .step-container,
+#how-it-works .steps-row-two .step-3 .step-container,
+#how-it-works .steps-row-two .step-4 .step-container {
+	transform: translateX(-50px);
+	opacity: 0;
+	transition: transform $fadeInLeftDuration, opacity 1s;
+	&.fadeInLeft {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+#faq #accordion .card {
+	transform: translateY(50px);
+	opacity: 0;
+	transition: transform $fadeInUpDuration, opacity $fadeInUpDuration;
+
+	&.fadeInUp {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+#payment-online {
+	transform: translateY(-50px);
+	opacity: 0;
+	transition: transform $fadeInUpDuration, opacity $fadeInLeftDuration;
+	&.fadeInUp {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 body{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 100;
@@ -275,7 +344,7 @@ body{
 
 .steps-row-three{
     color: #3b3b3b;
-	@include step-gradient-half($rr-mid-blue, #fff);
+	@include step-gradient-half($rr-mid-blue, #d6d6d6); //partial fix for changing bg color from fff
 	.container{
 		display: flex;
 		align-items: center;
@@ -288,7 +357,7 @@ body{
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		background: #fff;
+		background: #d6d6d6;
 		padding: 0 40px;
 		.step-3-teaser{
 		    margin: 40px;
@@ -310,7 +379,7 @@ body{
 		border-top: 120px solid transparent;
 		border-left: 50px solid $rr-mid-blue;
 		border-bottom: 120px solid transparent;
-		background: #fff;
+		background: #d6d6d6;
     }
 }
 
