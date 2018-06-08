@@ -118,10 +118,16 @@ $('#faq #accordion .card').waypoint({
 });
 $('#payment-online').waypoint({
   handler: function(direction) {
-    subtleEaseIn('#payment-online');
+    $('#payment-online').addClass('pulse');
   },
   offset: '70%'
 });
+// $('#payment-online').waypoint({
+//   handler: function(direction) {
+//     subtleEaseIn('#payment-online');
+//   },
+//   offset: '75%'
+// });
 
 // $('.hero').waypoint({
 // 	handler: function(direction) {
