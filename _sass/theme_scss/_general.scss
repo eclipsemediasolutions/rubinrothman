@@ -4,6 +4,8 @@
 // ADD Specific imports here
 // this file and parent_theme files are being imported and compiled by main.scss in the root
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+
+
 @import 'variables';
 @import 'overrides';
 
@@ -11,13 +13,114 @@
 $rr-blue: 		#005b8f;
 $rr-blue09: 	rgba(0, 91, 143,.9);
 $rr-blue07: 	rgba(0, 91, 143,.7);
-$rr-mid-blue:		#2c8bc2;
+$rr-mid-blue:		#1b7ab0;
 $hero-bg-blue: 	#040c19;
 $rr-light-blue: #60c5ff;
 $rr-green:	 	#b8d900;
 $rr-black: 		#3b3b3b;
 $rr-gray50: 	#e5e5e5;
+$required-red: #d12435;
 
+.required-red {
+  color: $required-red;
+}
+
+$fadeInUpDuration: 0.9s;
+$fadeInLeftDuration: 0.8s;
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+	// 20% {
+	// 	opacity: 1;
+	// }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+animation-duration: 1s;
+animation-fill-mode: both;
+  animation-name: pulse;
+}
+
+//fadeInUp animations on hero copy
+// #who-we-are .container,
+// .page-header-img .container {
+// 	//
+// 	transform: translateY(50px);
+// 	opacity: 0;
+// 	transition: transform $fadeInUpDuration, opacity $fadeInUpDuration;
+//
+// 	&.fadeInUp {
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+//a path forward transitions: translatex and opacity
+// #how-it-works .steps-row-one #row-one-copy {
+// 	transform: translateX(-50px);
+// 	opacity: 0;
+// 	transition: transform $fadeInLeftDuration, opacity $fadeInLeftDuration;
+// 	&.fadeInLeft {
+// 		transform: translateX(0);
+// 		opacity: 1;
+// 	}
+// }
+//A path forward transition: opacity only
+#how-it-works .steps-row-one #row-one-copy {
+	//transform: translateX(-50px);
+	opacity: 0;
+	transition: /*transform $fadeInLeftDuration,*/ opacity $fadeInLeftDuration;
+	&.fadeInLeft {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+//fadeinLeft for steps 1-4
+#how-it-works .steps-row-two .step-1 .step-container,
+#how-it-works .steps-row-two .step-2 .step-container,
+#how-it-works .steps-row-two .step-3 .step-container,
+#how-it-works .steps-row-two .step-4 .step-container {
+	transform: translateX(-50px);
+	opacity: 0;
+	transition: transform $fadeInLeftDuration, opacity 1s;
+	&.fadeInLeft {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.steps-row-three .step-3-teaser {
+	opacity: 0;
+	background-color: #dcdcdc;
+	transition: opacity 1s, background-color 1s;
+	&.fadeInUp {
+		opacity: 1;
+	}
+}
+
+#faq #accordion .card {
+	transform: translateY(50px);
+	opacity: 0;
+	transition: transform $fadeInUpDuration, opacity $fadeInUpDuration;
+
+	&.fadeInUp {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+#payment-online {
+	// opacity: 0;
+	// transition: opacity 1s;
+	// &.fadeInUp {
+	// 	opacity: 1;
+	// }
+}
 body{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 100;
@@ -66,7 +169,23 @@ body{
     font-weight: 200;
 
 }
-
+.navbar-toggler {
+//toggle hamburger icon with close icon
+	.fa-bars {
+		display: none;
+	}
+	.fa-times {
+		display: block;
+	}
+	&.collapsed {
+		.fa-bars {
+			display: block;
+		}
+		.fa-times {
+			display: none;
+		}
+	}
+}
 .navbar-dark {
 	padding: 0 1rem;
 	background: $rr-blue09;
@@ -257,7 +376,7 @@ body{
 
 .steps-row-three{
     color: #3b3b3b;
-	@include step-gradient-half($rr-mid-blue, #fff);
+	@include step-gradient-half($rr-mid-blue, #dcdcdc);
 	.container{
 		display: flex;
 		align-items: center;
@@ -270,7 +389,7 @@ body{
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		background: #fff;
+		background: #dcdcdc;
 		padding: 0 40px;
 		.step-3-teaser{
 		    margin: 40px;
@@ -292,14 +411,14 @@ body{
 		border-top: 120px solid transparent;
 		border-left: 50px solid $rr-mid-blue;
 		border-bottom: 120px solid transparent;
-		background: #fff;
+		background: #dcdcdc;
     }
 }
 
 
 #faq{
 	background: #fafafa;
-	padding: 50px 0;	
+	padding: 50px 0;
 	h2 {
 	    font-size: 26px;
 	    font-weight: 100;
