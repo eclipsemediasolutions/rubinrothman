@@ -13,7 +13,7 @@ stepsTeasers:
     text: 'Let’s discuss plans and payment options that work best for you and your budget'
   - step-icon: /images/start-your-plan.png
     img-alt: 'Computer screen with award icon'
-    header: '4. Start You Plan'
+    header: '4. Start Your Plan'
     text: 'You are one step closer to being debt-free'
 stepsTeasersSpanish:
   - step-icon: /images/get-in-touch.png
