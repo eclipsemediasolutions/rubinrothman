@@ -2,7 +2,7 @@ stepsTeasers:
   - step-icon: /images/get-in-touch.png
     img-alt: 'Ringing phone'
     header: '1. Get In Touch'
-    text: 'Get in touch and let’s find out more about your debt and ability to pay'
+    text: 'Get in touch and find out about your circumstances'
   - step-icon: /images/understand.png
     img-alt: 'Lightbulb lit up'
     header: '2. Understand'
@@ -14,7 +14,7 @@ stepsTeasers:
   - step-icon: /images/start-your-plan.png
     img-alt: 'Computer screen with award icon'
     header: '4. Start You Plan'
-    text: 'Now that we have a clear path, you are one payment closer to being debt free'
+    text: 'You are one step closer to being debt-free'
 stepsTeasersSpanish:
   - step-icon: /images/get-in-touch.png
     img-alt: 'telefono sonando'
