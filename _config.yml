@@ -9,8 +9,8 @@ title: Rubin and Rothman, LLC
 email: info@rubinrothman.com
 address: 1787 Veterans Memorial Highway <br> Islandia, NY 11749
 license: 2045512-DCA
-phone: '1-(631)-234-1500'
-description: > # 
+phone: '1-(800)-298-6058'
+description: > #
   Important text for SEO
 
 
@@ -26,12 +26,12 @@ exclude:
 
 
 policy-label: PRIVACY POLICY
-terms-label: TERMS OF USE 
+terms-label: TERMS OF USE
 link-policy: /privacy-policy.html
 link-terms: /terms-of-use.html
 
 es-policy-label: es PRIVACY POLICY
-es-terms-label: es TERMS OF USE 
+es-terms-label: es TERMS OF USE
 es-link-policy: /es/privacy-policy.html
 es-link-terms: /es/terms-of-use.html
 
