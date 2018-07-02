@@ -1,0 +1,230 @@
+
+//steps-forward
+@mixin step-gradient-half($left-color, $right-color) {
+	background: $left-color; /* Old browsers */
+	background: -moz-linear-gradient(left, $left-color 54%, $right-color 54%);
+	background: -webkit-linear-gradient(left, $left-color 54%,$right-color 54%);
+	background: linear-gradient(to right, $left-color 54%,$right-color 54%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left-color', endColorstr='$right-color',GradientType=1 ); /* IE6-9 */
+}
+
+
+.step-teaser{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: red;
+    padding: 0 10px 0 0;
+    h4{
+		font-size: 15px;
+		text-align: center;
+		margin: 5px 0;
+		text-transform: uppercase;
+		color: $rr-green;
+		font-weight: 600;
+		letter-spacing: .06em;
+    }
+    h5{
+		font-size: 13px;
+		text-align: center;
+		font-weight: 300;
+    }
+
+    @media(max-width: 991px){
+    	h4{
+    		font-size: 13px;
+    	}
+    	h5{
+    		font-size: 12px;
+    	}
+    }
+    img{
+  	    margin: 10px 0;
+    }
+    .cheveron-content{
+    	text-align: center;
+		background: #002439;
+		padding: 20px 0;
+	    max-width: 85%;
+	    min-height: 240px;
+	    position: relative;
+
+	}
+	.cheveron{
+		width: 0;
+		height: 0;
+		border-top: 120px solid transparent;
+		border-left: 50px solid #002439;
+		border-bottom: 120px solid transparent;
+    }
+    &.step-1{
+    	background: #0b3f5d;
+    	.cheveron-content{
+    		background: #003656;
+    	}
+    	.cheveron{
+    		border-left-color: #003656;
+    	}
+    }
+    &.step-2{
+    	background: #1e5372;
+    	.cheveron-content{
+    		background: #0b3f5d;
+    	}
+    	.cheveron{
+    		border-left-color: #0b3f5d;
+    	}
+
+    }
+    &.step-3{
+    	background: #1a5b81;
+    	.cheveron-content{
+    		background: #1e5372;
+    	}
+    	.cheveron{
+    		border-left-color: #1e5372;
+    	}
+    }
+    &.step-4{
+    	background: $rr-mid-blue;
+    	.cheveron-content{
+    		background: #1a5b81;
+    	}
+    	.cheveron{
+    		border-left-color: #1a5b81;
+    	}
+    }
+    @media(max-width: 767px){
+   		&.step-1,
+   		&.step-2,
+   		&.step-3,
+   		&.step-4{
+    		background: #003656;
+	    	.cheveron-content{
+	    		background: #003656;
+				max-width: 100%;
+				width: 100%;
+				margin: 0;
+			    min-height: auto;
+	    	}
+	    	.cheveron{
+	    		border-left-color: #003656;
+	    		display: none;
+
+	    	}
+	    }
+	}
+}
+
+
+.steps-row-one{
+    color: #fff;
+	@include step-gradient-half(#002439, #003656);
+
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+    h2{
+	    font-size: 26px;
+	    font-weight: 100;
+	    margin: 0 0 20px 0;
+	}
+	.cheveron-content{
+		background: #002439;
+		padding: 40px 0;
+	    max-width: 85%;
+	    min-height: 240px;
+	    position: relative;
+
+	}
+	.cheveron{
+		width: 0;
+		height: 0;
+		border-top: 120px solid transparent;
+		border-left: 50px solid #002439;
+		border-bottom: 120px solid transparent;
+    }
+    @media(max-width: 767px){
+		background: #002439;
+		.cheveron{
+			display: none;
+		}
+	}
+}
+
+.steps-row-two{
+    color: #fff;
+	@include step-gradient-half(#003656, $rr-mid-blue);
+	@media(max-width: 767px){
+		background: #003656;
+	}
+}
+
+.steps-row-three{
+    color: #3b3b3b;
+	@include step-gradient-half($rr-mid-blue, #dcdcdc);
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	.cheveron-content{
+	    max-width: 85%;
+	    min-height: 240px;
+	    position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		background: #dcdcdc;
+		padding: 0 40px;
+		.step-3-teaser{
+		    margin: 40px;
+		    .phone-cta{
+				font-size: 19px;
+				margin: 0;
+		    }
+		    .phone-cta-number{
+				font-size: 50px;
+				margin: 0;
+				line-height: 50px;
+				color: $rr-blue;
+		    }
+		}
+	}
+	.cheveron{
+		width: 0;
+		height: 0;
+		border-top: 120px solid transparent;
+		border-left: 50px solid $rr-mid-blue;
+		border-bottom: 120px solid transparent;
+		background: #dcdcdc;
+    }
+
+    @media(max-width: 767px){
+		background: #dcdcdc;
+		.cheveron-content{
+
+			.step-3-teaser{
+			 	margin: 0 0 0 10px;
+			 	h3{
+			 		
+			 	}
+			 	.phone-cta-number{
+				    font-size: 19px;
+				    display: block;
+				    line-height: 22px;
+				    margin-top: 10px;
+				}
+			 }
+			
+			img{
+				max-width: 40px;
+			}
+		}
+		.cheveron{
+			display: none;
+		}
+    }
+}

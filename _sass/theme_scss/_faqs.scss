@@ -1,0 +1,48 @@
+
+//faq
+#faq{
+	background: #fafafa;
+	padding: 50px 0;
+	h2 {
+	    font-size: 26px;
+	    font-weight: 100;
+	    margin: 0 0 20px;
+	    text-align: center;
+	}
+	.card{
+	    border-radius: 0;
+	    margin: 0 0 15px;
+	}
+	.card-header{
+	    padding: 0;
+	    margin: 0;
+	    line-height: 0;
+	    h5{
+	    	margin: 0;
+	    	a{
+	    		display: block;
+				text-align: left;
+				color: #fff;
+				background: $rr-mid-blue;
+				font-size: 20px;
+				display: flex;
+    			align-items: center;
+    			border-radius: 0;
+				&:before{
+					content: '-';
+					font-size: 30px;
+					line-height: 0;
+					padding: 0 10px 0 0;
+				}
+				&.collapsed{
+					background: #dcdcdc;
+					color: $rr-blue;
+					&:before{
+						content: '+';
+					}
+				}
+	    	}
+	    }
+	}
+}
+

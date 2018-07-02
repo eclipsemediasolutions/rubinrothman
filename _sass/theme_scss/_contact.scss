@@ -1,0 +1,55 @@
+
+
+//contact
+.page-content#contact{
+	background: #fafafa;
+	padding: 50px 0;
+	h2{
+			font-size: 26px;
+			font-weight: 100;
+			text-align: center;
+			margin: 20px 0 50px;
+	}
+	.contact-item{
+		margin-bottom: 40px;
+		label{
+			font-size: 18px;
+			text-transform: uppercase;
+			font-weight: 600;
+			display: block
+		}
+		div{
+			color: $rr-mid-blue;
+		}
+	}
+
+	.cotact-form{
+		form {
+			label{
+
+    font-size: 14px;
+    font-weight: 600;
+
+			}
+			.form-control{
+				border-radius: 0;
+				border-color: #ddd;
+			}
+			.btn.btn-primary{
+				background: $rr-green;
+				color: #3b3b3b;
+				border: 0;
+				border-radius: 0;
+				margin: 0;
+				float: right;
+				clear: both;
+				padding: 10px 39px;
+				font-weight: 600;
+				text-transform: uppercase;
+				&:hover{
+					background: lighten($rr-green, 10%);
+				}
+			}
+		}
+	}
+}

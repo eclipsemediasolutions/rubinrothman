@@ -1,0 +1,27 @@
+
+
+//hero-header
+.page-header-img{
+		min-height: 540px;
+		background: $hero-bg-blue;
+		background-repeat: no-repeat;
+		background-position: 100% 0;
+		background-size: 1300px;
+		display: flex;
+		align-items: center;
+		h2{
+			color: #fff;
+			margin-bottom: 40px;
+			max-width: 430px;
+			font-weight: 300;
+		}
+		label{
+			color: $rr-light-blue;
+			display: block;
+			margin: 0;
+		}
+		a{
+			color: $rr-green;
+			text-transform: uppercase;
+		}
+}

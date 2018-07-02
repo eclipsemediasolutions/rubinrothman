@@ -1,0 +1,33 @@
+
+
+//footer
+.copy{
+	background: $rr-mid-blue;
+	color: #fff;
+	font-size: 16px;
+	a {
+		color: #fff;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.container{
+		display: flex;
+	    padding: 30px 0;
+	    justify-content: space-between;
+
+	    text-transform: uppercase;
+
+	}
+}
+
+.disclamer{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	background: #3b3b3b;
+	p{
+		margin: 0;
+		padding: 15px 0;
+	}
+}

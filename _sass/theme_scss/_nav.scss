@@ -1,0 +1,109 @@
+//nav
+.navbar-toggler {
+	//toggle hamburger icon with close icon
+	.fa-bars {
+		display: none;
+	}
+	.fa-times {
+		display: block;
+	}
+	&.collapsed {
+		.fa-bars {
+			display: block;
+		}
+		.fa-times {
+			display: none;
+		}
+	}
+}
+.navbar-dark {
+	padding: 0 1rem;
+	background: $rr-blue09;
+	.navbar-brand{
+		margin-right: 40px;
+	}
+	.navbar-nav{
+		width: 100%;
+		.nav-item{
+			.nav-link {
+			    color: #fff;
+			    font-size: 14px;
+			    text-transform: uppercase;
+			    font-family: 'Montserrat';
+			    font-weight: 400;
+			    letter-spacing: .01em;
+			    padding: 20px 15px;
+			}
+
+			&.dropdown{
+				right: 0;
+				position: absolute;
+				@media(max-width: 1200px){
+    				top: 60px;
+				}
+				@media(max-width: 991px){
+					display: block;
+					position: relative;
+					width: 100%;
+					top: 0;
+				}
+
+				.nav-link{
+					background: $rr-gray50;
+					color: $rr-black;
+					@media(max-width: 991px){
+						padding: 10px;
+					}
+
+				}
+				.dropdown-menu{
+				    border-radius: 0;
+				    margin: 0;
+				    padding: 0;
+				    border: 0;
+				    width: 100%;
+				    
+				    a{
+				    	color: $rr-mid-blue;
+				    	&:hover{
+				    		background: lighten($rr-gray50, 5%);
+				    		color: $rr-blue;
+				    	}
+				    	&.disabled{
+							color: #333;
+							&:hover{
+								background: $rr-gray50;
+								color: $rr-black;
+
+							}
+						}
+				    }
+				}
+			}
+
+
+
+			&.make-a-payment{
+				.nav-link{
+					background: $rr-green;
+					color: $rr-black;
+					margin: 10px 0;
+					padding: 10px 20px;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 991px){
+	.navbar-top{
+		width: 100%;
+		.navbar-toggler{
+			float: right;
+			border: 0;
+			color: #fff;
+			padding: 10px 0;
+
+		}
+	}	
+}
