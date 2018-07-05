@@ -179,6 +179,11 @@
 		align-items: center;
 		background: #dcdcdc;
 		padding: 0 40px;
+		&:after{
+			content:'';
+			min-height:inherit;
+			font-size:0;
+		}
 		.step-3-teaser{
 		    margin: 40px;
 		    .phone-cta{
