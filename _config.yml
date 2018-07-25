@@ -26,6 +26,8 @@ exclude:
   - node_modules
   - gulpfile.js
 
+plugins:
+  - jekyll-seo-tag
 
 
 policy-label: PRIVACY POLICY
