@@ -14,7 +14,7 @@ mainMenu:
   - title: Make A Payment
     url: 'https://www.secured-server.biz/RubinRothman/HP/'
     class: make-a-payment
-  - title: Select A Language
+  - title: <i class="fa fa-fw fa-globe" aria-hidden="true"></i> <span class="hide-language"> Language</span>
     url: '#'
     class: dropdown
     submenu:
@@ -40,7 +40,7 @@ mainMenuSpanish:
   - title: ES Make A Payment
     url: 'https://www.secured-server.biz/RubinRothman/HP/'
     class: make-a-payment
-  - title: ES Select A Language
+  - title: <i class="fa fa-fw fa-globe" aria-hidden="true"></i> <span class="hide-language"> Idioma</span>
     url: '#'
     class: dropdown
     submenu:

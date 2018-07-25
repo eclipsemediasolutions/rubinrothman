@@ -21,6 +21,7 @@
 	background: $rr-blue09;
 	.navbar-brand{
 		margin-right: 40px;
+		font-size: 1.15rem;
 	}
 	.navbar-nav{
 		width: 100%;
@@ -39,7 +40,9 @@
 				right: 0;
 				position: absolute;
 				@media(max-width: 1200px){
-    				top: 60px;
+    				.hide-language {
+							display: none;
+						}
 				}
 				@media(max-width: 991px){
 					display: block;
@@ -62,7 +65,7 @@
 				    padding: 0;
 				    border: 0;
 				    width: 100%;
-				    
+
 				    a{
 				    	color: $rr-mid-blue;
 				    	&:hover{
@@ -105,5 +108,5 @@
 			padding: 10px 0;
 
 		}
-	}	
+	}
 }
