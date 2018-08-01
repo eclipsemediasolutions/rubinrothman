@@ -32,6 +32,7 @@ $(function() {
     event.preventDefault();
   });
 });
+
 // remove the focused state after click,
 // otherwise bootstrap will still highlight the link
 $("a").mouseup(function() {
@@ -59,25 +60,7 @@ function delayedEaseIn(item) {
     $(item).addClass('fadeInUp');
   }, 700);
 }
-//Aninmated ELs
-//
-// $('#who-we-are .container').waypoint({
-//   handler: function(direction) {
-//     //set timeout to delay this
-//
-//     delayedEaseIn('#who-we-are .container');
-//
-//   },
-//   offset: '85%'
-// });
 
-// $('.page-header-img .container').waypoint({
-//   handler: function(direction) {
-//     subtleEaseIn('.page-header-img .container');
-//   },
-//   offset: '85%'
-// });
-//fade in from left - step one of "a path forward"
 
 $('#how-it-works .steps-row-one #row-one-copy').waypoint({
   handler: function(direction) {
@@ -85,6 +68,7 @@ $('#how-it-works .steps-row-one #row-one-copy').waypoint({
   },
   offset: '80%'
 });
+
 //fade in steps 1 - 4 of row two of "a path forward"
 $('#how-it-works .steps-row-two .step-1 .step-container').waypoint({
   handler: function(direction) {
@@ -122,52 +106,17 @@ $('#payment-online').waypoint({
   },
   offset: '70%'
 });
-// $('#payment-online').waypoint({
-//   handler: function(direction) {
-//     subtleEaseIn('#payment-online');
-//   },
-//   offset: '75%'
-// });
-
-// $('.hero').waypoint({
-// 	handler: function(direction) {
-// 		subtleEaseIn('.hero-overlay');
-// 	},
-// 	offset: '85%'
-// });
+var isIE11 = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
 var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;
-console.log('ie version is: ', ieVersion);
 
 var isIE = !!window.ActiveXObject;
 if (isIE) {
   $('body').addClass('ie10');
 }
-console.log('ie10 boolean: ' + isIE);
-/**
-** ** ** **
-**
-	Add Links To hash
-**
-** ** ** **
-**/
-// $(function(){
+if (isIE11) {
+  $('body').addClass('ie11');
+}
 
-// 	// Javascript to enable link to tab
-// 	var url = document.location.toString();
 
-// 	if (url.match('#')) {
-// 	    $('.nav-pills a[href="#' + url.split('#')[1] + '"]').tab('show');
-// 	}
 
-// 	// Change hash for page-reload
-// 	$('.nav-pills a').on('shown.bs.tab', function (e) {
-// 	    window.location.hash = e.target.hash;
-// 	    $("html, body").animate({ scrollTop: $('#railcars').offset().top }, 0);
-// 	})
-// 	$('.nav-railcars .subnav a').on('click', function (e) {
-// 	    window.location.hash = e.target.hash;
-// 	    $('.railcars-tabs-wrap a[href="'+e.target.hash+'"]').tab('show');
-// 	    $('.nav-railcars .subnav a[href="#' + url.split('#')[1] + '"]').tab('show');
-// 	    $("html, body").animate({ scrollTop: $('#railcars').offset().top }, 1000);
-// 	})
-// });
+

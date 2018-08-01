@@ -1,16 +1,29 @@
 .ie10 {
-  .page-header-img {
-    .container {
-      margin-top: 145px;
-    }
-  }
-  #how-it-works {
-    .steps-row-three {
-      .container {
-        .cheveron-content {
-          padding-top: 45px;
-        }
-      }
-    }
-  }
+
+	.page-header-img {
+		.container {
+			margin-top: 145px;
+		}
+	}
+
+	#how-it-works {
+		.steps-row-three {
+			.container {
+				.cheveron-content {
+					padding-top: 45px;
+				}
+			}
+		}
+	}
+
+	.navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+		top: 60px;
+	}
+
+}
+
+.ie11{
+	.navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+		top: 60px;
+	}
 }
