@@ -136,6 +136,31 @@
 	}
 }
 
+
 .navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu a {
     text-align: center;
 }
+
+
+.ie10 {
+	.navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+		top: 60px;
+	}
+
+}
+.ie11{
+	.navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+		top: 60px;
+	}
+}
+
+
+
+@supports (-ms-ime-align:auto) {
+    .ie11 .navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+		top: auto !important;
+	}
+
+}
+
+
