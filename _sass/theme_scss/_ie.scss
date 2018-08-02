@@ -27,3 +27,14 @@
 		top: 60px;
 	}
 }
+
+_:-ms-lang(x), _:-webkit-full-screen, .ie11 .navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+	top: 0px;
+}
+
+
+@supports (-ms-ime-align:auto) {
+    .ie11 .navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu{
+		top: 0px;
+	}
+}
