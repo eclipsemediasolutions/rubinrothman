@@ -29,14 +29,25 @@ exclude:
 plugins:
   - jekyll-seo-tag
 
+contact-name-label: Name
+contact-email-label: Email
+contact-phone-label: Phone
+contact-message-label: Message
+contact-email-share-text: We'll never share your email with anyone else.
+
+es-contact-name-label: Nombre
+es-contact-email-label: Correo electrónico
+es-contact-phone-label: Teléfono
+es-contact-message-label: Mensaje
+es-contact-email-share-text: Nunca compartiremos su correo electrónico con nadie más.
 
 policy-label: PRIVACY POLICY
 terms-label: TERMS OF USE
 link-policy: /privacy-policy.html
 link-terms: /terms-of-use.html
 
-es-policy-label: es PRIVACY POLICY
-es-terms-label: es TERMS OF USE
+es-policy-label: POLITICA DE PRIVACIDAD
+es-terms-label: TERMINOS DE USO
 es-link-policy: /es/privacy-policy.html
 es-link-terms: /es/terms-of-use.html
 

@@ -16,5 +16,19 @@ faqList:
   - question: What do I do If I have a hardship?
     answer: 'Please immediately call us at the number below and ask to speak with your account resolution specialist who will work with you to resolve your account:<br/> Phone: 1-(800)-298-6058 between the hours of 8:30am-9:00pm (M-TH), 8:30am-5pm (F)'
 faqListSpanish:
-  - question: Who is Rubin Rothman, LLC
-    answer: 'Rubin & Rothman, LLC is a creditor’s rights law firm. For over 50 years our firm has worked with consumers to find equitable resolutions to outstanding obligations. Our firm’s goal is to treat every customer with dignity and respect and we appreciate every chance we have to prove it.'
+  - question: ¿Quién es Rubin & Rothman?
+    answer: 'Rubin & Rothman, LLC es una firma de abogados de derechos de acreedores.. Por más de 50 años nuestra firma ha trabajado con los consumidores para encontrar resoluciones justas a deudas pendientes. La meta de nuestra firma es tratar a cada cliente con dignidad y respeto, y apreciamos cada oportunidad que tenemos para demostrarlo.'
+  - question: ¿Cómo contacto a Rubin & Rothman?
+    answer: 'Teléfono: 1-(800)-298-6058 entre las horas de 8:30am-9:00pm (Lunes-Jueves), 8:30am-5pm (Viernes)<br/>Correo: Rubin and Rothman, LLC 1787 Veterans Memorial Highway Islandia, NY 11725 <br/> Correo electrónico: comments@rubinrothman.com'
+  - question: Yo he sido contactado por Rubin & Rothman, ¿Qué debo hacer?
+    answer: 'Por favor llámenos al número para hablar con uno de los especialistas de resolución de cuenta, quien trabajará con usted para resolver su cuenta: <br/>Teléfono: 1-(800)-298-6058 entre las horas de 8:30am-9:00pm (Lunes-Jueves), 8:30am-5pm (Viernes)'
+  - question: ¿Cuál es el saldo de mi cuenta?
+    answer: 'Por favor llámenos al número siguiente y podremos proporcionarle toda la información de su cuenta:<br/>Teléfono: 1-(800)-298-6058 entre las horas de 8:30am-9:00pm (Lunes-Jueves), 8:30am-5pm (Viernes)'
+  - question: ¿Cómo reporto una queja?
+    answer: 'Por favor envíenos un correo electrónico a complaints@rubinrothman.com o llame al 1-(800)-298-6058.'
+  - question: '¿Qué hago si no puedo pagar mi cuenta en este momento?'
+    answer:  'Estaremos contentos de trabajar con usted, por favor llámenos al número siguiente y pida discutir su situación única con su especialista de resolución de cuenta: <br/>Teléfono: 1-(800)-298-6058 entre las horas de 8:30am-9:00pm (Lunes-Jueves), 8:30am-5pm (Viernes)'
+  - question: 'Yo me declaré en quiebra, ¿Que debo hacer?'
+    answer:  'Por favor llámenos inmediatamente al número siguiente y pida hablar con los especialistas de resolución de su cuenta, quienes actualizarán su cuenta o escríbanos a la dirección de correo electrónico de abajo: <br/>Teléfono: 1-(800)-298-6058 entre las horas de 8:30am-9:00pm (Lunes-Jueves), 8:30am-5pm (Viernes) <br/>Correo electrónico: comments@rubinrothman.com'
+  - question: '¿Qué debo hacer si tengo dificultades?'
+    answer:  'Por favor llámenos inmediatamente al número siguiente y pida hablar con sus especialistas de resolución, quienes trabajarán con usted para resolver su cuenta: <br/>Teléfono: 1-(800)-298-6058 entre las horas de 8:30am-9:00pm (Lunes-Jueves), 8:30am-5pm (Viernes)'

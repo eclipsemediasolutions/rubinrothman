@@ -25,7 +25,7 @@ mainMenu:
         class: active
         status: btn disabled
 mainMenuSpanish:
-  - title: ES Who We Are
+  - title: Quienes Somos
     url: '#who-we-are'
     class: pagescroll who-we-are
   - title: ES How It Works
@@ -34,10 +34,10 @@ mainMenuSpanish:
   - title: ES FAQ
     url: '#faq'
     class: pagescroll faq
-  - title: ES Get In Touch
+  - title: Contáctenos
     url: '#contact'
     class: pagescroll contact
-  - title: ES Make A Payment
+  - title: Haga Un Pago
     url: 'https://www.secured-server.biz/RubinRothman/HP/'
     class: make-a-payment
   - title: <i class="fa fa-fw fa-flag" aria-hidden="true"></i> <span class="hide-language"> Idioma</span>

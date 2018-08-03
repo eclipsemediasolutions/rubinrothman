@@ -18,17 +18,17 @@ stepsTeasers:
 stepsTeasersSpanish:
   - step-icon: /images/get-in-touch.png
     img-alt: 'telefono sonando'
-    header: '1. Get In Touch'
-    text: 'Get in touch and let’s find out more about your debt and ability to pay'
+    header: '1. Contáctenos'
+    text: 'Contáctenos e infórmese acerca de sus circunstancias'
   - step-icon: /images/understand.png
     img-alt: 'Bombilla'
-    header: '2. Understand'
-    text: 'To best help you, we work to understand the reasons for your financial hardship'
+    header: '2. Comprenda'
+    text: 'Para ayudarle mejor, trabajamos para comprender las razones de sus dificultades financieras'
   - step-icon: /images/make-a-plan.png
     img-alt: 'portapapeles'
-    header: '3. Make A Plan'
-    text: 'Let’s discuss plans and payment options that work best for you and your budget'
+    header: '3. Haga Un Plan'
+    text: 'Discutamos planes y opciones de pagos que mejor trabajen para usted y su presupuesto'
   - step-icon: /images/start-your-plan.png
     img-alt: 'pantalla de la computadora con un premio'
-    header: '4. Start You Plan'
-    text: 'Now that we have a clear path, you are one payment closer to being debt free'
+    header: '4. Empiece Su Plan'
+    text: 'Usted está un paso más cerca a estar libre de deudas'
