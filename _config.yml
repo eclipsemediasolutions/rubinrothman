@@ -34,12 +34,14 @@ contact-email-label: Email
 contact-phone-label: Phone
 contact-message-label: Message
 contact-email-share-text: We'll never share your email with anyone else.
+send-label: Send
 
 es-contact-name-label: Nombre
 es-contact-email-label: Correo electrónico
 es-contact-phone-label: Teléfono
 es-contact-message-label: Mensaje
 es-contact-email-share-text: Nunca compartiremos su correo electrónico con nadie más.
+es-send-label: Envío
 
 policy-label: PRIVACY POLICY
 terms-label: TERMS OF USE

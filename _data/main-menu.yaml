@@ -31,7 +31,7 @@ mainMenuSpanish:
   - title: ES How It Works
     url: '#how-it-works'
     class: pagescroll how-it-works
-  - title: ES FAQ
+  - title: Preguntas frecuentes
     url: '#faq'
     class: pagescroll faq
   - title: Contáctenos

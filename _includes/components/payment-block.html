@@ -9,7 +9,11 @@
 	</div>
 	<div class="card" id="payment-online">
 		<span>{{page.recommended-label}}</span>
+		{% if page.spanishtheme == true %}
+		<img src="{{'/images/pagado.png' | prepend: site.baseurl | prepend: site.url }}" alt="graphic icon of a computer screen" />
+		{% else %}
 		<img src="{{'/images/pay-online.png' | prepend: site.baseurl | prepend: site.url }}" alt="graphic icon of a computer screen" />
+		{% endif %}
 		<h3>{{page.portal-label}}</h3>
 		<p>{{page.payment-portal-teaser}}</p>
 		<a href="{{page.payment-portal-link}}" target="_blank" rel="noopener">{{page.payment-portal-link-text}}</a>

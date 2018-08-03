@@ -57,7 +57,7 @@
 				 <label for="form-message">{% if page.spanishtheme == true %} {{ site.es-contact-message-label }} {% else %} {{ site.contact-message-label }} {% endif %}</label>
 				<textarea class="form-control"  id="form-message" name="message" placeholder="Message"  rows="5"></textarea>
 			</div>
-		    <button type="submit" class="btn btn-primary">Send</button>
+		    <button type="submit" class="btn btn-primary">{% if page.spanishtheme == true %} {{ site.es-send-label }} {% else %} {{ site.send-label }} {% endif %}</button>
 		</form>
 	</div>
 </div>
