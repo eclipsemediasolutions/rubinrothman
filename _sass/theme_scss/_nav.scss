@@ -48,7 +48,7 @@
 				right: 0;
 				width: 160px;
 				position: absolute;
-				@media(max-width: 1200px) {
+				@media(max-width: 1200px) and (min-width: 992px) {
 					.hide-language {
 						display: none;
 					}
@@ -162,5 +162,3 @@
 	}
 
 }
-
-
