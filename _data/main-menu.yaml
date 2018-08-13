@@ -25,10 +25,10 @@ mainMenu:
         class: active
         status: btn disabled
 mainMenuSpanish:
-  - title: Quienes Somos
+  - title: Quienes somos
     url: '#who-we-are'
     class: pagescroll who-we-are
-  - title: ES How It Works
+  - title: Cómo funciona
     url: '#how-it-works'
     class: pagescroll how-it-works
   - title: Preguntas frecuentes
