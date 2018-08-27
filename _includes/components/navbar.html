@@ -20,24 +20,30 @@
 				{% if page.spanishtheme == true %}
 					{% for item in site.data.main-menu.mainMenuSpanish %}
 					<li class="parent nav-item {{item.class}} {% if item.url == page.url %}active{% endif %}">
-
-						{% if item.submenu[0] %}
-						<a href="/{{ item.url | prepend: site.baseurl | prepend: site.url }}" class=" nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown">{{ item.title }}</a>
+						{% if item.class == 'make-a-payment' %}
+						<a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
 						{% else %}
-						<a href="/{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="pagescroll nav-link">{{ item.title }}</a>
-						{% endif %}
-						{% if item.submenu[0] %}
-						<div class="dropdown-menu">
-							{% for entry in item.submenu %}
-							<a href="{{ entry.url | prepend: site.baseurl | prepend: site.url }}" class="nav-link dropdown-item sbunav-{{entry.class}} {{entry.status}}">{{ entry.page }}</a>
-							{% endfor %}
-						</div>
+							  {% if item.submenu[0] %}
+							  <a href="/es/{{ item.url | prepend: site.baseurl | prepend: site.url }}" class=" nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown">{{ item.title }}</a>
+							  {% else %}
+							  <a href="/es/{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="nav-link">{{ item.title }}</a>
+							  {% endif %}
+							{% if item.submenu[0] %}
+							<div class="dropdown-menu">
+								{% for entry in item.submenu %}
+								<a href="{{ entry.url | prepend: site.baseurl | prepend: site.url }}" class="nav-link dropdown-item sbunav-{{entry.class}} {{entry.status}}">{{ entry.page }}</a>
+								{% endfor %}
+							</div>
+							{% endif %}
 						{% endif %}
 					</li>
 					{% endfor %}
 				{% else %}
 					{% for item in site.data.main-menu.mainMenu %}
 						<li class="parent nav-item {{item.class}} {% if item.url == page.url %}active{% endif %}">
+							{% if item.class == 'make-a-payment' %}
+							<a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+							{% else %}
 							{% if item.submenu[0] %}
 							<a href="/{{ item.url | prepend: site.baseurl | prepend: site.url }}" class=" nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown">{{ item.title }}</a>
 							{% else %}
@@ -50,9 +56,12 @@
 								{% endfor %}
 							</div>
 							{% endif %}
+							{% endif %}
 						</li>
 					{% endfor %}
+
 				{% endif %}
+
 			{% endif %}
 		</ul>
 	</div>
